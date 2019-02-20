@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            hr {
+                width: 90%
+            }
+        </style>
+    </head>
+    <body id="fondo" style="background-color: #777;">
+        <h2>Fecha con JS</h2>
+        <button type="button"
+                onclick="document.getElementById('fecha').innerHTML = Date()">
+            Mostrar fecha</button>
+        <p id="fecha"></p>
+                             
+        <hr/>
+        
+        <!--Cambiando el contenido de un html-->
+        <p id="democambiar">Javascript puede cambiar el contenido del HTML</p>
+        <button type="button" onclick='document.getElementById("democambiar").innerHTML 
+                    = "Cambie con Javascriptt!"'>Click para cambiar el parrafo de arriba</button>
+        <hr/>
+        
+        <!-- Cambiando un atributo HTML -->
+        <p>JavaScript puede cambiar los atributos HTML.</p>
+        <p>En este caso javascript puede cambiar el valor src(source) atributo de una imagen.</p>
+        <button onclick="document.getElementById('myImage').src='img/foco1.gif'">Tengo una idea</button>
+        <img id="myImage" src="img/foco0.gif" style="width:100px">       
+        <button onclick="document.getElementById('myImage').src='img/foco0.gif'">No se me ocurre nada</button>
+        <hr/>   
+        
+        <!-- Aplicando estilo a un elemento HTML -->
+        <h2>Que mas puede hacer javascript?</h2>
+        <p id="cambiarcss">JavaScript puede cambiar el estilo de un elemento HTML.</p>
+        <button type="button" onclick="document.getElementById('cambiarcss').style.fontSize='35px'">
+            Click para aplicar un estilo al parrafo</button>
+        <hr/>
+        
+        <!-- Mostrando elementos ocultos -->
+        <h2>Que más puede hacer Javacript?</h2>
+        <p>JavaScript puede mostrar elementos HTML ocultos.</p>
+        <p id="demohide" style="display:none">Hola, estaba oculto!</p>
+        <button type="button" onclick="document.getElementById('demohide').style.display='block'">
+        Dame click</button>
+        <hr/>
+        
+        
+
+
+    </body>
+</html>
