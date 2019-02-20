@@ -1,0 +1,55 @@
+/*Barra lateral*/
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+.barralateral {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.barralateral a {
+   display: block;
+   color: black;
+   padding: 16px;
+   text-decoration: none;
+}
+
+.barralateral a.active {
+  background-color:#4C4F50;
+  color: white;  
+}
+
+.barralateral a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+ }
+ 
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .barralateral {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .barralateral a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .barralateral a {
+    text-align: center;
+    float: none;
+  }
+}
