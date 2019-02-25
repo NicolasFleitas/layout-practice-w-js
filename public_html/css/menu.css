@@ -1,55 +1,62 @@
-
 body {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  font-family: "Lato", sans-serif;
-}
-.barralateral {
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
 }
 
-.barralateral a {
-   display: block;
-   color: black;
-   padding: 16px;
-   text-decoration: none;
+.navbar {
+  overflow: hidden;
+  background-color: #333; 
 }
 
-.barralateral a.active {
-  background-color:#4C4F50;
-  color: white;  
-}
-
-.barralateral a:hover:not(.active) {
-  background-color: #555;
+.navbar a {
+  float: left;
+  font-size: 16px;
   color: white;
- }
- 
-
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-@media screen and (max-width: 700px) {
-  .barralateral {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .barralateral a {float: left;}
-  div.content {margin-left: 0;}
+.subnav {
+  float: left;
+  overflow: hidden;
 }
 
-@media screen and (max-width: 400px) {
-  .barralateral a {
-    text-align: center;
-    float: none;
-  }
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
 }

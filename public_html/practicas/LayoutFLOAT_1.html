@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;  /* Las propiedades de ancho y alto (y propiedades mín. / Máx.) 
+                           Incluyen contenido, relleno y borde  */
+  /*
+  Box-sizing:Por Defecto. Las propiedades de ancho y alto (y las propiedades mín. / Máx.) 
+  Incluyen solo el contenido. Borde y relleno no están incluidos
+  */
+}
+
+.header, .footer {
+  background-color: grey;
+  color: white;
+  padding: 15px;
+}
+
+.column {
+  float: left; 
+  padding: 15px;
+}
+
+.clearfix::after { /*The ::after selector inserts something after the content of each selected element(s).
+                   Aplica los sgtes estilos luego de utilizar un .clearfix*/    
+  content: "";
+  clear: both; /* No se permiten elementos flotantes en el lado izquierdo o derecho */
+  display: table; /*Los elementos se van a comportar como una tabla*/
+  
+  /*Display:
+  La propiedad de visualización especifica el comportamiento de visualización 
+ (el tipo de cuadro de representación) de un elemento.
+  En HTML, el valor predeterminado de la propiedad de visualización se toma 
+ de las especificaciones HTML o de la hoja de estilo predeterminada del navegador / usuario.
+  El valor predeterminado en XML es en línea, incluidos los elementos SVG.
+  */
+}
+
+.menu {
+  width: 25%;
+}
+
+.content {
+  width: 75%;
+}
+
+.menu ul {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Chania</h1>
+</div>
+
+<div class="clearfix">
+  <div class="column menu">
+    <ul>
+      <li>The Flight</li>
+      <li>The City</li>
+      <li>The Island</li>
+      <li>The Food</li>
+    </ul>
+  </div>
+
+  <div class="column content">
+    <h1>The City</h1>
+    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+    <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Footer Text</p>
+</div>
+
+</body>
+</html>
