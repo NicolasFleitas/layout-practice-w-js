@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>String methods</title>
+        <meta charset="UTF-8">        
+    </head>    
+<body>
+
+<h2>1. JavaScript String Methods</h2>
+<div id="cap1" style="display: none;">
+<p>El indexOf() metodo, toma un segundo para parametro como la posicion a iniciar la busqueda del texto espeficifado:</p>
+<p id="demo"></p>
+<hr>
+<p>The search() method returns the position of the first occurrence of a specified text in a string:</p>
+<p id="demo2"></p>
+<hr>
+<p>The lastIndexOf() method returna la ultima posicion de la aparicion de un texto</p>
+<p id="demo3"></p>
+</div>
+<button onclick="document.getElementById('cap1').style.display = 'block'">Mostrar</button>
+<button onclick="document.getElementById('cap1').style.display = 'none'">Ocultar</button>
+
+<hr>
+<h2>2. Extraer texto de un string </h2>
+<div id="cap2">
+<h2>Existen 3 metodos</h2>
+<ol type="1">
+    <li>slice(start, end)</li>
+    <li>substring(start, end)</li>
+    <li>substr(start, length)</li>
+</ol>
+
+<h2>El metodo slice()</h2>
+
+<p>slice() extrae una parte de un texto y retorno el texto extraido en un nuevo string</p>
+<p>El metodo toma 2 atributos: <strong>posicion inicial</strong>  la <strong>posición final</strong> (final no incluido).</p>
+
+<p id="demoslice"></p>
+<p>Si se omite el segundo parametro el metodo cortara hasta el final de la cadena</p>
+<p id="demoslice2"></p>
+<hr>
+<h2>Substring metodo</h2>
+<p>El metodo substring es similar a slice</p>
+<p>La diferencia es que no acepta valores negativos</p>
+<p>El substr() metodo extraer una parte de un string y retorna la parte extraida en un nuevo string</p>
+<p id="demosubstring"></p>
+
+<hr>
+<h2>Substr metodo</h2>
+<p>The substr() metodo extrae una parte de un string y retorna las partes extraida en un nuevo string</p>
+<p>La diferencia es ese segundo parametro especificando la longitud del texto a extraer</p>
+<p id="demosubstr"></p>
+<hr>
+</div>
+<button onclick="document.getElementById('cap2').style.display = 'block'">Mostrar</button>
+<button onclick="document.getElementById('cap2').style.display = 'none'">Ocultar</button>
+
+
+<h2>3. Replace String</h2>
+<div id="cap3">
+<p>Reemplazar "Microsoft" por "W3Schools" en el parrafo de abajo:</p>
+<button style="display: inline;" onclick="myFunction()">Reemplazar!</button>
+<p id="demoreplace">Please visit Microsoft!</p>
+<p>Este metodo cambia la cadena a la que se llama. Devuelve una nueva cadena.</p>
+<p>Por defecto: el replace solo reemplaza la primera coincidencia   </p>
+
+<hr>
+<p>Reemplazar "Microsoft" por "W3Schools" en el parrafo sgte:</>
+<button onclick="myFunctionr2()">Reemplazo 2</button>
+<p id="demoreplace2">Please visit Microsoft!!</p>
+</div>
+<button onclick="document.getElementById('cap3').style.display = 'block'">Mostrar</button>
+<button onclick="document.getElementById('cap3').style.display = 'none'">Ocultar</button>
+<hr>
+
+<h2>4. Concatenar textos</h2>
+<div id="cap4">
+<p id="democoncat"></p>
+</div>
+<script> 
+var text1 = "Hello";
+var text2 = "World";
+var text3 = text1.concat(" ", text2);
+document.getElementById("democoncat").innerHTML = text3;
+</script>
+<button onclick="document.getElementById('cap4').style.display = 'block'">Mostrar</button>
+<button onclick="document.getElementById('cap4').style.display = 'none'">Ocultar</button>
+<hr>
+<p>Click para alertar que se elimino espacios del string.</p>
+<button onclick="myFunctionTrim()">Try it</button>
+<p><strong>Note:</strong> The trim() method is not supported in Internet Explorer 8 and earlier versions.</p>
+
+<script>
+function myFunctionTrim() {
+  var str = "     Hello World!     ";
+  alert(str.trim());
+}
+</script>
+<hr>
+<h2>charAt()</h2>
+<p>The charAt() metodo returna el caracter en una posicion dada en una cadena</p>
+<p id="democharAt"></p>
+<script>
+var str = "HELLO WORLD";
+document.getElementById("democharAt").innerHTML = str.charAt(0);
+</script>
+<hr>
+<p>The charCodeAt() retorna el unicode de un caracter de una posicion dada en una cadena</p>
+<p id="charCodeAt"></p>
+<script>
+var str = "HELLO WORLD";
+document.getElementById("charCodeAt").innerHTML = str.charCodeAt(0);
+</script>
+<hr>
+
+<p>ECMAScript 5 allows property acces on strings:</p>
+<p id="demoECMAScript5"></p>
+<script>
+var cadena = "HELLO WORLD";
+document.getElementById("demoECMAScript5").innerHTML = str[0];
+</script>
+
+<hr>
+<p>El acceso a la propiedad puede ser un poco impredecible:</p>
+<ul>
+    <li>No funciona en IE7 o anterior</li>
+    <li>Hace que los STring se vean como arrays ( <em>pero no lo son</em></li>
+    <li>SI no se encuentra ningun caracter, [] devuelve undefined, mientras que charAt() devuelve una cadena vacia</li>
+    <li>Es de solo lectura. str[0] = "A" no da error pero no funciona</li>
+</ul>
+<p>ECMAScript 5 Permite el acceso de propiedades en cadenas. pero solo de lectura:</p>
+<p id="ECMAScript2"></p>
+
+<script>
+var str = "HELLO WORLD";
+str[0] = "A";  // Does not work
+document.getElementById("ECMAScript2").innerHTML = str[0];
+
+</script>
+<hr>
+<p>Si queremos trabajar un string como array, debemos convertirlo</p>
+
+<h2>String to array - split() </h2>
+
+
+<p>Click "Try it" to display the first array element, after a string split.</p>
+<button onclick="myFunctionsplit()">Try it</button>
+<p id="split"></p>
+<p>SI el separador se omite el array va a contener todo el string en la posicion [0]</p>
+<p>Si el separador es "", la matriz devuelta será una matriz de caracteres individuales:</p>
+
+<script>
+function myFunctionsplit() {
+  var str = "a,b,c,d,e,f";
+  var arr = str.split(",");
+  document.getElementById("split").innerHTML = arr[0];
+}
+</script>
+<hr>
+
+
+
+<script>
+var str = "Por favor locate where 'locate' occurs!";
+var pos = str.indexOf("locate",15);
+document.getElementById("demo").innerHTML = pos;
+var pos = str.search("locate");
+document.getElementById("demo2").innerHTML = pos;
+var pos = str.lastIndexOf("locate");
+document.getElementById("demo3").innerHTML = pos;
+
+//slice
+var str2 = "Apple, Banana, Kiwi";
+var res = str2.slice(7,13);
+document.getElementById("demoslice").innerHTML = res;
+
+var res = str2.slice(7);
+document.getElementById("demoslice2").innerHTML = res;
+//substring
+var res = str2.substring(7,13);
+document.getElementById("demosubstring").innerHTML = res;
+//substr
+var res = str2.substr(7,6);
+document.getElementById("demosubstr").innerHTML = res;
+
+//Reemplazar texto
+function myFunction() {
+  var texto = document.getElementById("demoreplace").innerHTML; 
+  var textoreplace = texto.replace("Microsoft","W3Schools");
+  document.getElementById("demoreplace").innerHTML = textoreplace;
+}
+
+function myFunctionr2() {
+  var strr2 = document.getElementById("demoreplace2").innerHTML; 
+  //para reemplazar case insesitive usar una expresion regular /i
+  //To replace all matches, use a regular expression with a /g flag (global match):
+  var txtr2 = strr2.replace(/MICROSOFT/i,"W3Schools");
+  document.getElementById("demoreplace2").innerHTML = txtr2;
+  }
+</script>
+
+</body>
+</html>
+
+
