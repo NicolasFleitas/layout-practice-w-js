@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+        function validateForm() {
+          var x = document.forms["miFormulario"]["fname"].value;
+          if (x === "") {
+          alert("Por favor llene el campo de nombre");
+          return false;
+          }
+        }
+        
+function validarNros() {
+  var x, text;
+  x = document.getElementById("numb").value;
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "Datos no validos";
+  } else {
+    text = "Datos correctos";
+  }
+  document.getElementById("demonumero").innerHTML = text;
+}
+</script>
+       
+    </head>
+    <body>
+        <div><h1>Ejemplo JS</h1></div>
+<pre>
+function validateForm() {
+var x = document.forms["myForm"]["fname"].value;
+if (x == "") {
+alert("Name must be filled out");
+return false;
+}
+Esta función puede ser llamada cuando un formulario se submitea
+}</pre>
+        <form name="miFormulario" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            Nombre <input type="text" name="fname">
+            <input type="submit" value="Ingresar">            
+        </form>
+        
+        <!-- VALIDACION DE NUMEROS-->
+        
+        <p>Favor ingrese un número de 1 al 10</p>        
+        <input id="numb">        
+        <button type="button" onclick="validarNros()">Validar</button>
+        <p id="demonumero"></p>
+        
+        
+    </body>
+</html>

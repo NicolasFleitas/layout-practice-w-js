@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Javascript-Numeros</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .codigos{
+                 border: 1px solid;
+                 width: 30%;
+                 padding: 1em;
+                 float: left;
+                 height: 150px;
+                 margin: 1em;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Numbers</h1>
+        
+        <p>Si sumas número y un string el resultado sera un string -  
+        Javascript intenta convetir string a numbers en operaciones aritmeticas</p>  
+        <p>Cuidado al sumar numeros, javascript usa el operador + para sumar y concatenar. Numeros suman, strings se concatenan</p>
+<pre>
+<code>
+var x = 10;
+var y = "20";
+var z = x + y;  // z será 1020 (un string) 
+</code>
+</pre>
+        
+<pre class="codigos">
+<code>
+var x = "100";
+var y = "10";
+var z= x/y; // el resultado sera 10
+</code>
+</pre>
+      
+<pre class="codigos">
+<code>
+*toString*
+var x = 123;
+x.toString(); // returns 123 from variable x
+(123).toString();// returns 123 from literal 123
+(100 + 23).toString();
+</code>
+</pre>
+
+<pre class="codigos">
+<code>
+var x = 9.656;
+x.toExponential(2); // returns 9.66e+0
+x.toExponential(4); // returns 9.6560e+0
+x.toExponential(6); // returns 9.656000e+0
+</code>
+</pre>
+        <h2>Arrays</h2>
+        
+        <p><strong>POP();</strong></p>
+        <p id="demoarray"></p>
+        <p id="demoarray2"></p>
+        <script>            
+           // pop de un array
+          var fruits = ["Banana","Naranja","Manzana", "Pera"];            
+            document.getElementById("demoarray").innerHTML = fruits;            
+            fruits.pop();
+            document.getElementById("demoarray2").innerHTML = fruits;
+        </script>
+        
+        <p><strong>PUSHING();</strong></p>
+        <p id="demoarray3"> </p>
+        <button onclick="myfunction()">click para push </button>
+        <script>            
+           // push de un array
+          var frutas2 = ["Banana","Sandia","Aguacate","Durazno"];            
+            document.getElementById("demoarray3").innerHTML = frutas2;            
+            function myfunction() { 
+                frutas2.push("Kiwi");
+                document.getElementById("demoarray3").innerHTML = frutas2;            
+                }                
+        </script>
+        
+        <h1>Shifting elements</h1>
+        <p>Equivalente a popping pero funciona con el primero elemento en vez del ultimo</p>
+        <p>Elimina el primer elemento del array y desplaza los demas elementos a un indice menor</p>
+
+        <p id="demoshift1"></p>
+        <p id="demoshift2"></p>
+
+        <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demoshift1").innerHTML = fruits;
+        fruits.shift();
+        document.getElementById("demoshift2").innerHTML = fruits;
+        </script>
+
+    </body>
+</html>
+
