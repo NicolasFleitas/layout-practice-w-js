@@ -1,5 +1,5 @@
 .centrado { text-align: center; }
-
+body { margin: 0 ; padding: 0;}
 * {
   box-sizing: border-box; 
 }
@@ -9,7 +9,7 @@
 }
 
 header {
-  background-color: #666;
+  background-color: #f0550e;
   padding: 5px;
   text-align:left;
   color: white; 
@@ -17,28 +17,23 @@ header {
   margin-top: 30px;
   
 }
-
-#titulo {
-    color: #ff0033;
+#titulo {    
     font-family: serif;
    /* text-transform: capitalize;*/
 }
-
-#titulo sub {
-    font-style: oblique;
-}
-
 nav {
   float: left;
   width: 30%;
   height: 300px;
-  background:#f0550e;
+  background: #333;
   padding: 20px;
+  overflow-y: scroll;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
+  
 }
 
 article {
@@ -58,6 +53,14 @@ section:after { /* luego de cada section se declara estas propiedades css*/
 
 nav a:hover, a:active {
   background-color:red;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    margin: 5px;
 }
 
 footer {  
@@ -103,6 +106,7 @@ footer {
 
 /* Diseño con flex*/
 .flex-conteuno {
+  margin-top: 1em;
   display: flex;
   background-color: DodgerBlue;
 }
@@ -125,8 +129,7 @@ footer {
      text-align: center;
      line-height: 75px;
      font-size: 30px;
-     width: 30px;
-    
+     width: 30px;    
  }
  
  
